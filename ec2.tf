@@ -96,7 +96,7 @@ locals {
   upload_file_script = templatefile("${path.module}/scripts/upload_file.py", {
     iot_endpoint       = data.aws_iot_endpoint.data.endpoint_address
     iot_cred_endpoint  = data.aws_iot_endpoint.credential.endpoint_address
-    alies_role         = aws_iot_role_alias.this.alias
+    alias_role         = aws_iot_role_alias.this.alias
     target_bucket_name = aws_s3_bucket.this.bucket
   })
 
