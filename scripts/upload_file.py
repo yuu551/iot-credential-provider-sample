@@ -52,7 +52,7 @@ def upload_s3(file_path):
 
         conn = http.client.HTTPSConnection(iot_cred_endpoint, port=443, context=context)
         # 認証情報プロバイダーとIoTエイリアスに紐づくURLからトークンを取得
-        conn.request("GET", "/role-aliases/${alias_role}/credentials", headers=headers)
+        conn.request("GET", "/role-aliases/${role_alias}/credentials", headers=headers)
         response = conn.getresponse()
         credential_data = json.loads(response.read())
 
