@@ -93,7 +93,7 @@ resource "aws_iam_role" "iot_device" {
 
 # S3バケットの作成
 resource "aws_s3_bucket" "this" {
-  bucket = "device-upload-file-sample-bucket-yjinn"
+  bucket = "<your-account-bucket>"
 }
 
 resource "aws_s3_bucket_public_access_block" "this" {
